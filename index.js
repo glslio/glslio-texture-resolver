@@ -1,10 +1,12 @@
 var UniformsTextureResolver = require("uniforms-texture-resolver");
 
+var baseUrlGlslIo = typeof window !== "undefined" ? "" : "http://staging.glsl.io";
+
 function GlslioTextureResolver (loadImage) {
   UniformsTextureResolver.call(this, function (path) {
     var url = null;
     if (!path.match(/\//)) {
-      url = "http://staging.glsl.io/assets/textures/"+encodeURIComponent(path);
+      url = baseUrlGlslIo + "/assets/textures/" + encodeURIComponent(path);
     }
     if (!url) throw new Error("invalid path");
     return loadImage(url);
