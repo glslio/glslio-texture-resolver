@@ -1,6 +1,6 @@
 var UniformsTextureResolver = require("uniforms-texture-resolver");
 
-var baseUrlGlslIo = typeof window !== "undefined" ? "" : "http://staging.glsl.io";
+var baseUrlGlslIo = typeof window !== "undefined" ? "" : "https://glsl.io";
 
 function GlslioTextureResolver (loadImage) {
   UniformsTextureResolver.call(this, function (path) {
