@@ -33,4 +33,6 @@ function GlslioTextureResolver (loadImage) {
 
 GlslioTextureResolver.prototype = Object.create(UniformsTextureResolver.prototype);
 
+GlslioTextureResolver.resolveUrl = resolveUrl;
+
 module.exports = GlslioTextureResolver;
